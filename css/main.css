@@ -78,14 +78,15 @@ header nav ul li:not(.active):not(.btn) a:hover {
     border-bottom: 5px solid #8f0007;
 }
 
-header nav ul li.btn a {
+header nav ul li.btn a, .email .block button {
     background: #8f0007;
     padding: 10px 18px;
     border-radius: 2px;
     transition: all 500ms ease;
 }
 
-header nav ul li.btn a:hover {
+header nav ul li.btn a:hover, 
+.email .block button:hover {
     background: #4d0205;
 }
 
@@ -207,4 +208,107 @@ header nav ul li.btn a:hover {
 .banner img {
     width: 100%;
     margin-bottom: 30px;
+}
+
+.features {
+    background: url('/img/wall.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 0;
+}
+
+.features h3,
+.features p {
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features h3 {
+    font-size: 30px;
+}
+
+.features .info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.features .info .block {
+    text-align: center;
+    width: 17%;
+    margin: 30px 2%;
+}
+
+.features .info .block img {
+    margin-bottom: 15px;
+}
+
+.projects {
+    padding: 80px 0;
+}
+
+.projects h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.projects p {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.email {
+    padding-bottom: 120px;
+}
+
+.email h3 {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.email .block {
+    background: #000;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 40px 3%;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.email .block h4 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.email .block p {
+    width: 500px;
+}
+
+.email .block input {
+    background: #fff;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    width: 600px;
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 400;
+    padding: 20px 30px;
+    position: relative;
+    right: -110px;
+    z-index: 1;
+    padding-right: 120px;
+}
+
+.email .block button {
+    cursor: pointer;
+    border: 0;
+    padding: 15px 17px;
+    position: relative;
+    z-index: 2;
+    color: #fff;
 }
