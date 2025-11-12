@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 400; 
+    color: #fff;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+background: #171717;
+background: linear-gradient(0deg,rgba(23, 23, 23, 1) 0%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 1) 100%);
+width: 100%;
+}
+
+.container {
+    width: 2500px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 50px 0;
+}
+
+header .logo {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+header nav {
+    float: right;
+    width: 48%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff;
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: #4d0205;
+    border-radius: 10px;
+    position: relative;
+    top: 15px;
+    left: -5px;
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    border-bottom: 5px solid #8f0007;
+}
+
+header nav ul li.btn a {
+    background: #8f0007;
+    padding: 10px 18px;
+    border-radius: 2px;
+    transition: all 500ms ease;
+}
+
+header nav ul li.btn a:hover {
+    background: #4d0205;
+}
+
+.hero {
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero--info {
+    width: 1000px;
+    padding-top: 70px;
+}
+
+.hero--info h2 {
+     font-size: 30px;
+     font-weight: 600px;
+     color: #8f0007;
+}
+
+.hero--info h1 {
+    font-size: 50px;
+    font-weight: 600px;
+}
+
+.hero--info p {
+    font-weight: 500px;
+    line-height: 170%;
+    margin: 30px 0;
+}
+
+.hero--info .btn {
+    background: #8f0007;
+    color: #fff;
+    border-radius: 20px;
+    padding: 25px 40px;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 20px;
+}
+
+.hero--info .btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero img {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    width: 1200px;
+}
+
+.trending {
+    padding-top: 60px;
+}
+
+.trending h3 {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.trending .disc {
+    color: #fff;
+    background: #4d0205;
+    border-radius: 5px;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+}
+
+.trending .disc:hover {
+    transform: scale(1.1);
+}
+
+.trending .alb {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.trending .alb span {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.trending .alb .block {
+    flex-shrink: 0;
+    width: 20%; 
+}
