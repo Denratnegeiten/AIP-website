@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
-
 * { 
     margin: 0; 
     padding: 0; 
 }
 
 body { 
-    font-family: 'Poppins', 'sans-serif'; 
+    font-family: sans-serif; 
     font-weight: 400; 
     color: #fff; 
     font-size: 15px; 
@@ -354,7 +352,7 @@ header nav ul li.btn a:hover,
     border: 0;
     border-radius: 5px;
     width: 600px;
-    font-family: 'Poppins', 'sans-serif';
+    font-family: sans-serif;
     font-weight: 400;
     padding: 20px 30px;
     position: relative;
