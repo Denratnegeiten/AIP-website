@@ -197,22 +197,22 @@
     </div>
     <script>
         function submitSubscription() {
-            const emailInput = document.getElementById('emailField');
-            const email = emailInput.value;
-            const statusMessage = document.getElementById('statusMessage');
+                const API_ENDPOINT = 'https://windir-backend.onrender.com/subscribe'; 
+                
+                const emailInput = document.getElementById('emailField');
+                const email = emailInput.value;
+                const statusMessage = document.getElementById('statusMessage');
 
-            // Базовая клиентская валидация
             if (!email || !email.includes('@') || !email.includes('.')) {
                 statusMessage.textContent = 'Пожалуйста, введите корректный адрес электронной почты.';
-                statusMessage.style.color = '#8f0007'; // Красный цвет для ошибки (из вашего CSS)
+                statusMessage.style.color = '#8f0007';
                 return;
             }
             
             statusMessage.textContent = 'Отправка...';
             statusMessage.style.color = '#fff'; 
 
-            // Отправка данных на маршрут /subscribe вашего сервера (http://localhost:3000/subscribe)
-            fetch('/subscribe', { 
+            fetch(API_ENDPOINT, { 
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -220,24 +220,19 @@
                 body: JSON.stringify({ email: email }),
             })
             .then(response => {
-                // Если ответ сервера не 2xx (например, 409 - дубликат)
                 if (!response.ok) {
-                    // Получаем сообщение об ошибке с сервера
                     return response.json().then(errorData => {
                         throw new Error(errorData.message || 'Ошибка сервера.');
                     });
                 }
-                // Если ответ успешен (201 Created)
                 return response.json();
             })
             .then(data => {
-                // Успех
                 statusMessage.textContent = data.message || 'Вы успешно подписались!';
                 statusMessage.style.color = 'green';
-                emailInput.value = ''; // Очищаем поле
+                emailInput.value = '';
             })
             .catch(error => {
-                // Отображение ошибки
                 console.error('Ошибка:', error);
                 statusMessage.textContent = error.message || 'Произошла неизвестная ошибка при подписке.';
                 statusMessage.style.color = '#8f0007';
